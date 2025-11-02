@@ -10,25 +10,28 @@ A production-ready system for detecting cryptocurrency arbitrage opportunities a
 - 🎯 Displaying win rate in backtested trading simulations
 
 ## Features
+
 ### Dashboard demonstrating arbitrage opportunities in the crypto market
-![Educational_view](readme_pics/localhost_8050_.png)
+<img width="1350" height="2909" alt="Image" src="https://github.com/user-attachments/assets/49739e51-688c-4496-9b99-690586c0fb59" />
 
 ### Helping algorthmic trading bot builders tune their bot
-![Strategy parameters](readme_pics/127.0.0.1_8051_.png)
-Understanding spread and opportunity duration in the 
+<img width="1350" height="2354" alt="Image" src="https://github.com/user-attachments/assets/e221e714-be98-464d-93f1-567c84ce35d2" />
 
-![Exchange health](readme_pics/127.0.0.1_8051_%20(1).png)
+Understanding spread and opportunity duration 
+
+<img width="1350" height="1566" alt="Image" src="https://github.com/user-attachments/assets/14d080a2-8ba7-43ea-95a9-c727d56a1130" />
 Monitoring exchange health to decide whether to pull robot out in an emergency
 
-![Anomaly_detection](readme_pics/127.0.0.1_8051_%20(3).png)
+<img width="1350" height="2131" alt="Image" src="https://github.com/user-attachments/assets/f51db814-2f45-4d6f-a724-3dd57e2cc3e2" />
 Watch out for anomalous prices or volumes
 
-![Historical analysis](readme_pics/127.0.0.1_8051_hist.png)
+<img width="1350" height="1775" alt="Image" src="https://github.com/user-attachments/assets/05ca55b5-82a1-415e-9b1c-fe82e37f2c0d" />
 Backtesting our ML trading bot
 
 ### Benchmarking our trading bot against a benchmark
-![backtest](readme_pics/127.0.0.1_8052_%20(1).png)
+<img width="1504" height="2699" alt="Image" src="https://github.com/user-attachments/assets/c72bf203-e530-4c3a-ab41-07efb4188ee9" />
 This backtesting system allows you to compare different trading strategies for cryptocurrency arbitrage.
+
 
 
 
