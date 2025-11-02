@@ -724,7 +724,7 @@ class ArbitrageDashboard:
                     ]),
                     html.P([
                         html.Strong("Profit after fees: "),
-                        html.Span(f"{best.profit_after_fees:.2f}%", className="text-light fs-4"),
+                        html.Span(f"{best.profit_after_fees:.2f}%", className="text-white fs-4"),
                         f" (spread: {best.spread_pct:.2f}%)"
                     ]),
                     html.Small(f"Detected: {best.timestamp.strftime('%H:%M:%S')}")

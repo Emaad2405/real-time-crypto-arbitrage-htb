@@ -313,7 +313,7 @@ class AnalyticsDashboard:
                          annotation_text=f"P{p}: {val:.1f}s")
 
         fig.update_layout(
-            title="Opportunity Lifespan Analysis",
+            title="Opportunity Lifespan Distribution",
             xaxis_title="Duration (seconds)",
             yaxis_title="Cumulative %",
             hovermode='x unified',
@@ -374,7 +374,7 @@ class AnalyticsDashboard:
                 html.H4(exchange, style={'marginBottom': 10}),
                 html.P(f"Current Latency: {latency}ms", style={'fontSize': 24, 'fontWeight': 'bold', 'color': color}),
                 html.P(status, style={'fontSize': 18}),
-                html.P(f"P95: {latency + 30}ms | P99: {latency + 80}ms", style={'color': '#7f8c8d'}),
+                html.P(f"P95: {latency + 30}ms | P99: {latency + 80}ms", style={'color': "#19bbc7"}),
             ], style={'flex': 1, 'padding': '20px', 'backgroundColor': '#f8f9fa',
                      'marginRight': '10px', 'borderRadius': '8px', 'border': f'2px solid {color}'})
 
@@ -437,7 +437,7 @@ class AnalyticsDashboard:
                                    'backgroundColor': status_color, 'borderRadius': '5px'}),
                 ], style={'width': '100%', 'backgroundColor': '#ecf0f1', 'borderRadius': '5px', 'marginBottom': 10}),
                 html.P(f"Uptime: {uptime:.1f}%", style={'fontSize': 18}),
-                html.P(f"Disconnects: {int((100-uptime)*10)}", style={'color': '#7f8c8d'}),
+                html.P(f"Disconnects: {int((100-uptime)*10)}", style={'color': "#19bbc7"}),
             ], style={'flex': 1, 'padding': '15px', 'backgroundColor': 'white',
                      'marginRight': '10px', 'borderRadius': '8px', 'border': '1px solid #dee2e6'})
 
@@ -559,7 +559,7 @@ class AnalyticsDashboard:
                          'backgroundColor': '#ecf0f1', 'borderRadius': '8px', 'marginRight': '10px'}),
 
                 html.Div([
-                    html.H3("Success Rate", style={'color': '#7f8c8d', 'marginBottom': 5}),
+                    html.H3("Opportunity Capture Rate", style={'color': '#7f8c8d', 'marginBottom': 5}),
                     html.P(f"{success_rate:.1f}%", style={'fontSize': 36, 'fontWeight': 'bold', 'color': '#3498db'}),
                 ], style={'flex': 1, 'textAlign': 'center', 'padding': '20px',
                          'backgroundColor': '#ecf0f1', 'borderRadius': '8px', 'marginRight': '10px'}),
@@ -681,7 +681,7 @@ class AnalyticsDashboard:
                 html.P(f"Current: {MIN_PROFIT_THRESHOLD}% | Opportunities detected: {total_opps}",
                       style={'color': '#7f8c8d'}),
             ], style={'padding': '20px', 'backgroundColor': 'white', 'borderRadius': '8px',
-                     'border': f'2px solid {color}'}),
+                     'border': f'2px solid {color}', "color":"black"}),
         ], style={'marginTop': '20px'})
 
     def create_anomaly_summary(self):

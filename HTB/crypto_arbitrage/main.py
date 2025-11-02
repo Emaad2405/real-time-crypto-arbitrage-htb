@@ -111,7 +111,6 @@
 
 
 
-
 """Main application entry point."""
 import asyncio
 import threading
