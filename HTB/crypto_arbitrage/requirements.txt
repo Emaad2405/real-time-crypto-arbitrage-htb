@@ -1,0 +1,24 @@
+# Core streaming and data processing
+websocket-client==1.7.0
+websockets==12.0
+requests==2.31.0
+pandas==2.2.0
+numpy==1.26.3
+
+# ML and analytics
+scikit-learn==1.4.0
+xgboost==2.0.3
+joblib==1.3.2
+
+# Visualization
+plotly==5.18.0
+dash==2.14.2
+dash-bootstrap-components==1.5.0
+
+# Database (optional, for persistence)
+influxdb-client==1.39.0
+
+# Utilities
+python-dotenv==1.0.0
+loguru==0.7.2
+pydantic==2.5.3

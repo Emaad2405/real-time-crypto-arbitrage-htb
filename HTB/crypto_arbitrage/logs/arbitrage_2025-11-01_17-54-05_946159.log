@@ -1,0 +1,23 @@
+2025-11-01 17:54:05.948 | INFO     | __main__:run:75 - ============================================================
+2025-11-01 17:54:05.948 | INFO     | __main__:run:76 - 🚀 CRYPTO ARBITRAGE DETECTION SYSTEM
+2025-11-01 17:54:05.949 | INFO     | __main__:run:77 - ============================================================
+2025-11-01 17:54:05.949 | INFO     | __main__:run:78 - Monitoring exchanges: Coinbase, Binance, Bitstamp
+2025-11-01 17:54:05.949 | INFO     | __main__:run:79 - Trading pairs: BTC-USD, ETH-USD, SOL-USD
+2025-11-01 17:54:05.949 | INFO     | __main__:run:80 - Dashboard: http://localhost:8050
+2025-11-01 17:54:05.954 | INFO     | __main__:run:81 - ============================================================
+2025-11-01 17:54:05.990 | INFO     | dashboard:run:458 - Starting dashboard on http://0.0.0.0:8050
+2025-11-01 17:54:07.961 | INFO     | __main__:run_data_collection:63 - Starting data collection and arbitrage detection...
+2025-11-01 17:54:07.961 | INFO     | data_ingestion:start:224 - Starting multi-exchange aggregator...
+2025-11-01 17:54:08.169 | INFO     | data_ingestion:connect:25 - Connected to Bitstamp
+2025-11-01 17:54:08.170 | INFO     | data_ingestion:subscribe:177 - Subscribed to Bitstamp symbols: ['btcusd', 'ethusd', 'solusd']
+2025-11-01 17:54:08.487 | INFO     | data_ingestion:connect:25 - Connected to Coinbase
+2025-11-01 17:54:08.488 | INFO     | data_ingestion:subscribe:95 - Subscribed to Coinbase symbols: ['BTC-USD', 'ETH-USD', 'SOL-USD']
+2025-11-01 17:54:08.834 | INFO     | data_ingestion:connect:131 - Connected to Binance
+2025-11-01 17:59:07.973 | INFO     | __main__:train_ml_model:37 - Training ML model on historical data...
+2025-11-01 17:59:08.089 | WARNING  | ml_predictor:train:124 - Insufficient data for training
+2025-11-01 18:04:08.099 | INFO     | __main__:train_ml_model:37 - Training ML model on historical data...
+2025-11-01 18:04:08.136 | WARNING  | ml_predictor:train:124 - Insufficient data for training
+2025-11-01 18:09:08.146 | INFO     | __main__:train_ml_model:37 - Training ML model on historical data...
+2025-11-01 18:09:08.169 | WARNING  | ml_predictor:train:124 - Insufficient data for training
+2025-11-01 18:14:08.185 | INFO     | __main__:train_ml_model:37 - Training ML model on historical data...
+2025-11-01 18:14:08.211 | WARNING  | ml_predictor:train:124 - Insufficient data for training

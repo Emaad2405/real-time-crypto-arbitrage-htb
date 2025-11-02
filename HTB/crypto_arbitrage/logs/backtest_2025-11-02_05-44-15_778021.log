@@ -1,0 +1,57 @@
+2025-11-02 05:44:15.779 | INFO     | __main__:main:17 - ======================================================================
+2025-11-02 05:44:15.779 | INFO     | __main__:main:18 - 🤖 CRYPTO ARBITRAGE BOT BACKTEST
+2025-11-02 05:44:15.779 | INFO     | __main__:main:19 - ======================================================================
+2025-11-02 05:44:15.779 | INFO     | __main__:main:22 - Loading ML models...
+2025-11-02 05:44:15.784 | SUCCESS  | ml_predictor:load:265 - Spread predictor loaded from models/spread_predictor_live.pkl
+2025-11-02 05:44:15.799 | WARNING  | ml_predictor:load:372 - Loading scorer from legacy object format. Consider retraining for consistency.
+2025-11-02 05:44:15.799 | SUCCESS  | ml_predictor:load:378 - Opportunity scorer loaded from models/opportunity_scorer_live.pkl
+2025-11-02 05:44:15.800 | SUCCESS  | __main__:main:32 - ✅ Spread predictor loaded
+2025-11-02 05:44:15.800 | SUCCESS  | __main__:main:37 - ✅ Opportunity scorer loaded
+2025-11-02 05:44:15.800 | INFO     | __main__:main:40 - 
+Initializing bots...
+2025-11-02 05:44:15.800 | INFO     | __main__:main:53 - ✅ ML Arbitrage Bot initialized
+2025-11-02 05:44:15.800 | INFO     | __main__:main:54 -    - ML Confidence Threshold: 0.4
+2025-11-02 05:44:15.800 | INFO     | __main__:main:55 -    - Min Spread: -1.0%
+2025-11-02 05:44:15.800 | INFO     | __main__:main:56 -    - Min Profit: -2.0%
+2025-11-02 05:44:15.800 | INFO     | __main__:main:66 - ✅ Benchmark Bot initialized
+2025-11-02 05:44:15.800 | INFO     | __main__:main:67 -    - Min Spread: -0.5%
+2025-11-02 05:44:15.800 | INFO     | __main__:main:68 -    - Min Profit: -2.0%
+2025-11-02 05:44:15.800 | INFO     | __main__:main:69 -    - Position Size: 5.0%
+2025-11-02 05:44:15.800 | INFO     | __main__:main:72 - 
+Initializing backtest engine...
+2025-11-02 05:44:15.801 | INFO     | __main__:main:78 - ✅ Backtest engine ready
+2025-11-02 05:44:15.801 | INFO     | __main__:main:81 - 
+Loading historical opportunities...
+2025-11-02 05:44:15.802 | INFO     | bot.backtest_engine:load_latest_opportunities:99 - Loading latest opportunities from opportunities_20251102_002023.csv
+2025-11-02 05:44:15.908 | INFO     | bot.backtest_engine:load_opportunities_from_csv:57 - Loaded 71424 opportunities from captured_data\opportunities_20251102_002023.csv
+2025-11-02 05:44:46.501 | SUCCESS  | __main__:main:90 - ✅ Loaded 71424 opportunities
+2025-11-02 05:44:46.501 | INFO     | __main__:main:93 - 
+======================================================================
+2025-11-02 05:44:46.501 | INFO     | __main__:main:94 - 🚀 STARTING BACKTEST
+2025-11-02 05:44:46.501 | INFO     | __main__:main:95 - ======================================================================
+2025-11-02 05:44:46.509 | INFO     | bot.backtest_engine:run_backtest:137 - Starting backtest with 71424 opportunities
+2025-11-02 05:44:46.509 | INFO     | bot.backtest_engine:run_backtest:138 - Testing 2 bots
+2025-11-02 05:46:05.816 | INFO     | bot.backtest_engine:run_backtest:166 - Processed 10000/71424 opportunities (126.1 opp/sec)
+2025-11-02 05:47:25.061 | INFO     | bot.backtest_engine:run_backtest:166 - Processed 20000/71424 opportunities (126.1 opp/sec)
+2025-11-02 05:48:44.095 | INFO     | bot.backtest_engine:run_backtest:166 - Processed 30000/71424 opportunities (126.3 opp/sec)
+2025-11-02 05:50:04.172 | INFO     | bot.backtest_engine:run_backtest:166 - Processed 40000/71424 opportunities (125.9 opp/sec)
+2025-11-02 05:51:23.224 | INFO     | bot.backtest_engine:run_backtest:166 - Processed 50000/71424 opportunities (126.0 opp/sec)
+2025-11-02 05:52:44.283 | INFO     | bot.backtest_engine:run_backtest:166 - Processed 60000/71424 opportunities (125.6 opp/sec)
+2025-11-02 05:54:04.412 | INFO     | bot.backtest_engine:run_backtest:166 - Processed 70000/71424 opportunities (125.5 opp/sec)
+2025-11-02 05:54:16.327 | INFO     | bot.backtest_engine:run_backtest:177 - 
+ML_Arbitrage_Bot Results:
+2025-11-02 05:54:16.327 | INFO     | bot.backtest_engine:run_backtest:178 -   Total Trades: 71424
+2025-11-02 05:54:16.327 | INFO     | bot.backtest_engine:run_backtest:179 -   Win Rate: 100.00%
+2025-11-02 05:54:16.327 | INFO     | bot.backtest_engine:run_backtest:180 -   Net Profit: $-10000.00
+2025-11-02 05:54:16.327 | INFO     | bot.backtest_engine:run_backtest:181 -   Return: -100.00%
+2025-11-02 05:54:16.327 | INFO     | bot.backtest_engine:run_backtest:182 -   Sharpe Ratio: -6.884
+2025-11-02 05:54:16.327 | INFO     | bot.backtest_engine:run_backtest:183 -   Max Drawdown: 100.00%
+2025-11-02 05:54:16.383 | INFO     | bot.backtest_engine:run_backtest:177 - 
+Benchmark_Bot Results:
+2025-11-02 05:54:16.383 | INFO     | bot.backtest_engine:run_backtest:178 -   Total Trades: 71424
+2025-11-02 05:54:16.384 | INFO     | bot.backtest_engine:run_backtest:179 -   Win Rate: 100.00%
+2025-11-02 05:54:16.384 | INFO     | bot.backtest_engine:run_backtest:180 -   Net Profit: $-10000.00
+2025-11-02 05:54:16.384 | INFO     | bot.backtest_engine:run_backtest:181 -   Return: -100.00%
+2025-11-02 05:54:16.384 | INFO     | bot.backtest_engine:run_backtest:182 -   Sharpe Ratio: -6.884
+2025-11-02 05:54:16.384 | INFO     | bot.backtest_engine:run_backtest:183 -   Max Drawdown: 100.00%
+2025-11-02 05:54:16.388 | ERROR    | __main__:<module>:168 - ❌ Fatal error: Object of type bool is not JSON serializable

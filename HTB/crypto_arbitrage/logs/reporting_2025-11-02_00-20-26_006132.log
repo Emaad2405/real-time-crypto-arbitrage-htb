@@ -1,0 +1,13 @@
+2025-11-02 00:20:26.007 | INFO     | __main__:<module>:77 - Generating model performance report...
+2025-11-02 00:20:27.123 | SUCCESS  | __main__:generate_performance_report:57 - Performance metrics successfully saved to models\model_performance_metrics.csv
+2025-11-02 00:20:27.124 | INFO     | __main__:generate_performance_report:63 - ========================================================================================================================
+2025-11-02 00:20:27.124 | INFO     | __main__:generate_performance_report:64 - ML MODEL PERFORMANCE METRICS
+2025-11-02 00:20:27.124 | INFO     | __main__:generate_performance_report:65 - ========================================================================================================================
+2025-11-02 00:20:27.128 | INFO     | __main__:generate_performance_report:68 -                  Model               Status                      Method Train_R2 Test_R2 Accuracy                         Model_File  Model_Size_KB
+2025-11-02 00:20:27.128 | INFO     | __main__:generate_performance_report:68 -       Spread Predictor TRAINED SUCCESSFULLY Gradient Boosting Regressor    0.999   0.986      N/A   models\spread_predictor_live.pkl            392
+2025-11-02 00:20:27.128 | INFO     | __main__:generate_performance_report:68 - Opportunity Classifier TRAINED SUCCESSFULLY    Random Forest Classifier      N/A     N/A    1.000 models\opportunity_scorer_live.pkl             47
+2025-11-02 00:20:27.128 | INFO     | __main__:generate_performance_report:69 - ========================================================================================================================
+2025-11-02 00:20:27.128 | INFO     | __main__:generate_performance_report:70 - Spread Predictor: R2_train=0.999 | R2_test=0.986
+2025-11-02 00:20:27.129 | INFO     | __main__:generate_performance_report:71 - Opportunity Classifier: Accuracy=1.000
+2025-11-02 00:20:27.129 | INFO     | __main__:generate_performance_report:72 - ========================================================================================================================
+2025-11-02 00:20:27.129 | INFO     | __main__:<module>:79 - Report generation complete.

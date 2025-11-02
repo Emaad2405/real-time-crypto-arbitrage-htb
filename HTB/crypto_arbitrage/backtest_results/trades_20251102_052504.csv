@@ -1,0 +1,1 @@
+timestamp,bot_name,symbol,buy_exchange,sell_exchange,buy_price,sell_price,amount,spread_pct,predicted_profit_pct,actual_profit_pct,profit_usd,fees_usd,slippage_usd,success,execution_time_ms

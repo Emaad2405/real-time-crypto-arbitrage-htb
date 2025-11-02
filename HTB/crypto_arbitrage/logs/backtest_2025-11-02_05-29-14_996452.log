@@ -1,0 +1,35 @@
+2025-11-02 05:29:14.997 | INFO     | __main__:main:17 - ======================================================================
+2025-11-02 05:29:14.998 | INFO     | __main__:main:18 - 🤖 CRYPTO ARBITRAGE BOT BACKTEST
+2025-11-02 05:29:14.998 | INFO     | __main__:main:19 - ======================================================================
+2025-11-02 05:29:14.998 | INFO     | __main__:main:22 - Loading ML models...
+2025-11-02 05:29:15.002 | SUCCESS  | ml_predictor:load:265 - Spread predictor loaded from models/spread_predictor_live.pkl
+2025-11-02 05:29:15.016 | WARNING  | ml_predictor:load:372 - Loading scorer from legacy object format. Consider retraining for consistency.
+2025-11-02 05:29:15.017 | SUCCESS  | ml_predictor:load:378 - Opportunity scorer loaded from models/opportunity_scorer_live.pkl
+2025-11-02 05:29:15.017 | SUCCESS  | __main__:main:32 - ✅ Spread predictor loaded
+2025-11-02 05:29:15.017 | SUCCESS  | __main__:main:37 - ✅ Opportunity scorer loaded
+2025-11-02 05:29:15.017 | INFO     | __main__:main:40 - 
+Initializing bots...
+2025-11-02 05:29:15.017 | INFO     | __main__:main:53 - ✅ ML Arbitrage Bot initialized
+2025-11-02 05:29:15.017 | INFO     | __main__:main:54 -    - ML Confidence Threshold: 0.4
+2025-11-02 05:29:15.017 | INFO     | __main__:main:55 -    - Min Spread: -1.0%
+2025-11-02 05:29:15.017 | INFO     | __main__:main:56 -    - Min Profit: -2.0%
+2025-11-02 05:29:15.018 | INFO     | __main__:main:66 - ✅ Benchmark Bot initialized
+2025-11-02 05:29:15.018 | INFO     | __main__:main:67 -    - Min Spread: -0.5%
+2025-11-02 05:29:15.018 | INFO     | __main__:main:68 -    - Min Profit: -2.0%
+2025-11-02 05:29:15.018 | INFO     | __main__:main:69 -    - Position Size: 5.0%
+2025-11-02 05:29:15.018 | INFO     | __main__:main:72 - 
+Initializing backtest engine...
+2025-11-02 05:29:15.019 | INFO     | __main__:main:78 - ✅ Backtest engine ready
+2025-11-02 05:29:15.019 | INFO     | __main__:main:81 - 
+Loading historical opportunities...
+2025-11-02 05:29:15.019 | INFO     | bot.backtest_engine:load_latest_opportunities:99 - Loading latest opportunities from opportunities_20251102_002023.csv
+2025-11-02 05:29:15.147 | INFO     | bot.backtest_engine:load_opportunities_from_csv:57 - Loaded 71424 opportunities from captured_data\opportunities_20251102_002023.csv
+2025-11-02 05:29:46.463 | SUCCESS  | __main__:main:90 - ✅ Loaded 71424 opportunities
+2025-11-02 05:29:46.463 | INFO     | __main__:main:93 - 
+======================================================================
+2025-11-02 05:29:46.463 | INFO     | __main__:main:94 - 🚀 STARTING BACKTEST
+2025-11-02 05:29:46.463 | INFO     | __main__:main:95 - ======================================================================
+2025-11-02 05:29:46.472 | INFO     | bot.backtest_engine:run_backtest:137 - Starting backtest with 71424 opportunities
+2025-11-02 05:29:46.472 | INFO     | bot.backtest_engine:run_backtest:138 - Testing 2 bots
+2025-11-02 05:31:05.563 | INFO     | bot.backtest_engine:run_backtest:166 - Processed 10000/71424 opportunities (126.4 opp/sec)
+2025-11-02 05:32:25.630 | INFO     | bot.backtest_engine:run_backtest:166 - Processed 20000/71424 opportunities (125.7 opp/sec)

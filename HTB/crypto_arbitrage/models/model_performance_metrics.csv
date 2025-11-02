@@ -1,0 +1,3 @@
+Model,Status,Method,Train_R2,Test_R2,Accuracy,Model_File,Model_Size_KB
+Spread Predictor,TRAINED SUCCESSFULLY,Gradient Boosting Regressor,0.999,0.986,N/A,models\spread_predictor_live.pkl,392
+Opportunity Classifier,TRAINED SUCCESSFULLY,Random Forest Classifier,N/A,N/A,1,models\opportunity_scorer_live.pkl,47
