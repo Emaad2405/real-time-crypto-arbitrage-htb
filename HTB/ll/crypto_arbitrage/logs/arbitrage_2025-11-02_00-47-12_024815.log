@@ -1,0 +1,7 @@
+2025-11-02 00:47:12.028 | INFO     | __main__:run:51 - ============================================================
+2025-11-02 00:47:12.029 | INFO     | __main__:run:52 - 🚀 CRYPTO ARBITRAGE MONITOR
+2025-11-02 00:47:12.029 | INFO     | __main__:run:53 - ============================================================
+2025-11-02 00:47:12.029 | INFO     | __main__:run:56 - 🧠 Loading ML models...
+2025-11-02 00:47:12.034 | ERROR    | ml_predictor:load:254 - Error loading model: 'SpreadPredictor' object is not subscriptable
+2025-11-02 00:47:12.050 | ERROR    | ml_predictor:load:349 - Error loading opportunity scorer: 'OpportunityScorer' object is not subscriptable
+2025-11-02 00:47:12.050 | ERROR    | __main__:run:60 - ❌ Failed to load one or more ML models. Exiting.

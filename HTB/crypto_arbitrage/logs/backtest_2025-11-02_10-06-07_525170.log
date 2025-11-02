@@ -32,3 +32,5 @@ Loading historical opportunities...
 2025-11-02 10:06:46.290 | INFO     | bot.backtest_engine:run_backtest:137 - Starting backtest with 71424 opportunities
 2025-11-02 10:06:46.291 | INFO     | bot.backtest_engine:run_backtest:138 - Testing 2 bots
 2025-11-02 10:08:25.169 | INFO     | bot.backtest_engine:run_backtest:166 - Processed 10000/71424 opportunities (101.1 opp/sec)
+2025-11-02 10:09:48.282 | INFO     | bot.backtest_engine:run_backtest:166 - Processed 20000/71424 opportunities (109.9 opp/sec)
+2025-11-02 10:11:16.457 | INFO     | bot.backtest_engine:run_backtest:166 - Processed 30000/71424 opportunities (111.0 opp/sec)

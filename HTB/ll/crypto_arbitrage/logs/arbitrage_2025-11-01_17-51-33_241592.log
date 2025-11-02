@@ -1,0 +1,15 @@
+2025-11-01 17:51:33.243 | INFO     | __main__:run:75 - ============================================================
+2025-11-01 17:51:33.244 | INFO     | __main__:run:76 - 🚀 CRYPTO ARBITRAGE DETECTION SYSTEM
+2025-11-01 17:51:33.244 | INFO     | __main__:run:77 - ============================================================
+2025-11-01 17:51:33.244 | INFO     | __main__:run:78 - Monitoring exchanges: Coinbase, Binance, Bitstamp
+2025-11-01 17:51:33.245 | INFO     | __main__:run:79 - Trading pairs: BTC-USD, ETH-USD, SOL-USD
+2025-11-01 17:51:33.245 | INFO     | __main__:run:80 - Dashboard: http://localhost:8050
+2025-11-01 17:51:33.248 | INFO     | __main__:run:81 - ============================================================
+2025-11-01 17:51:33.283 | INFO     | dashboard:run:458 - Starting dashboard on http://0.0.0.0:8050
+2025-11-01 17:51:35.258 | INFO     | __main__:run_data_collection:63 - Starting data collection and arbitrage detection...
+2025-11-01 17:51:35.258 | INFO     | data_ingestion:start:224 - Starting multi-exchange aggregator...
+2025-11-01 17:51:35.549 | INFO     | data_ingestion:connect:25 - Connected to Bitstamp
+2025-11-01 17:51:35.550 | INFO     | data_ingestion:subscribe:177 - Subscribed to Bitstamp symbols: ['btcusd', 'ethusd', 'solusd']
+2025-11-01 17:51:35.833 | INFO     | data_ingestion:connect:25 - Connected to Coinbase
+2025-11-01 17:51:35.834 | INFO     | data_ingestion:subscribe:95 - Subscribed to Coinbase symbols: ['BTC-USD', 'ETH-USD', 'SOL-USD']
+2025-11-01 17:51:36.172 | INFO     | data_ingestion:connect:131 - Connected to Binance

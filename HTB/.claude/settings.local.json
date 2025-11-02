@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir models)",
+      "Bash(\"/c/Users/ahmad/AppData/Local/Programs/Python/Python313/python.exe\" -c \"\nfrom arbitrage_detector import ArbitrageDetector\n\n# Check if detector has any data\ndetector = ArbitrageDetector()\nstats = detector.get_statistics()\nrecent_opps = detector.get_recent_opportunities(minutes=60)\n\nprint(''=''*60)\nprint(''CURRENT DATA STATUS'')\nprint(''=''*60)\nprint(f''Total Opportunities: {stats.get(\"\"total_opportunities\"\", 0)}'')\nprint(f''Recent (last hour): {len(recent_opps)}'')\nprint(f''Average Profit: {stats.get(\"\"avg_profit\"\", 0):.2f}%'')\nprint(f''Max Profit: {stats.get(\"\"max_profit\"\", 0):.2f}%'')\nprint(''=''*60)\n\nif len(recent_opps) == 0:\n    print(''\\n❌ NO OPPORTUNITIES DETECTED YET'')\n    print(''   The system needs to collect data first.'')\n    print(''   Please run: python main.py'')\n    print(''   Wait 2-5 minutes for opportunities to be detected.'')\nelse:\n    print(f''\\n✅ {len(recent_opps)} opportunities available'')\n    print(''   Analytics dashboard should show visualizations.'')\n\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

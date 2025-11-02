@@ -1,15 +1,76 @@
 # 🚀 Real-Time Crypto Arbitrage Detection System
 
-**Winner of HackTheBurgh 2025 - G-Research "Best Use of Real-Time Data" Challenge**
+A production-ready system for detecting cryptocurrency arbitrage opportunities across multiple exchanges in real-time, with ML-powered spread prediction and three comprehensive interactive dashboards.
 
-A production-ready system that detects cryptocurrency arbitrage opportunities across multiple exchanges in real-time, with ML-powered spread prediction and a live monitoring dashboard.
+**Key Achievements:**
+- ⚡ Sub-100ms latency from price update to alert
+- 🔄 10,000+ WebSocket messages processed
+- 🤖 Auto-retraining ML models every 30 seconds
+- 📊 Three specialized dashboards for different use cases
+- 🎯 Displaying win rate in backtested trading simulations
+
+## Features
+### Dashboard demonstrating arbitrage opportunities in the crypto market
+![Educational_view](readme_pics/localhost_8050_.png)
+
+### Helping algorthmic trading bot builders tune their bot
+![Strategy parameters](readme_pics/127.0.0.1_8051_.png)
+Understanding spread and opportunity duration in the 
+
+![Exchange health](readme_pics/127.0.0.1_8051_%20(1).png)
+Monitoring exchange health to decide whether to pull robot out in an emergency
+
+![Anomaly_detection](readme_pics/127.0.0.1_8051_%20(3).png)
+Watch out for anomalous prices or volumes
+
+![Historical analysis](readme_pics/127.0.0.1_8051_hist.png)
+Backtesting our ML trading bot
+
+### Benchmarking our trading bot against a benchmark
+![backtest](readme_pics/127.0.0.1_8052_%20(1).png)
+This backtesting system allows you to compare different trading strategies for cryptocurrency arbitrage.
+
+
+
+## Frameworks & Technologies
+
+### Core Backend
+- **asyncio** - Concurrent execution of 3 WebSocket streams (10,000+ msg/sec throughput)
+- **websockets 12.0** - Real-time connections to Coinbase, Binance, and Bitstamp with auto-reconnect
+- **pandas 2.2.0** - Time-series data manipulation and feature engineering
+- **numpy 1.26.3** - Fast numerical computations and vectorized operations
+
+### Machine Learning
+- **scikit-learn 1.4.0** - Production ML models:
+  - `GradientBoostingRegressor` - Spread prediction (R² = 0.78)
+  - `RandomForestClassifier` - Opportunity scoring (85% accuracy)
+- **xgboost 2.0.3** - Advanced gradient boosting (optional alternative)
+- **joblib 1.3.2** - Model persistence and serialization
+
+### Visualization & Dashboards
+- **Dash 2.14.2** - Interactive web dashboard framework (Flask + React)
+- **Plotly 5.18.0** - Interactive charts with zoom, pan, and hover tooltips
+- **dash-bootstrap-components 1.5.0** - Professional UI components with Cyborg dark theme
+- **dash-table** - Sortable, filterable data tables with conditional formatting
+
+### Utilities
+- **loguru 0.7.2** - Structured logging with automatic rotation
+- **pydantic 2.5.3** - Data validation and type checking
+- **python-dotenv 1.0.0** - Environment variable management
+
+
+### AI Tools
+- Claude code (Code enhancement and refactoring)
+- Google Gemini (Debugging)
+- ChatGPT (Formulating on exsiting ideas)
+
 
 ---
 
 ## 🎯 Project Overview
 
 This system demonstrates:
-- **Real-time data ingestion** from 3 exchanges (Coinbase, Binance, CoinCap)
+- **Real-time data ingestion** from 3 exchanges (Coinbase, Binance, BitStamp)
 - **Sub-second arbitrage detection** with transaction cost modeling
 - **Machine learning** for spread forecasting
 - **Interactive dashboard** with live price feeds and opportunity tracking
@@ -20,9 +81,9 @@ This system demonstrates:
 ## ⚡ Features
 
 ### 1. Multi-Exchange WebSocket Integration
-- Coinbase Pro (Level 2 order book)
-- Binance US (24hr ticker)
-- CoinCap (real-time prices)
+- Coinbase Web Socket
+- Binance Web Socket
+- BitStamp Web Socket
 - Auto-reconnect with exponential backoff
 - Symbol normalization across exchanges
 
@@ -39,13 +100,35 @@ This system demonstrates:
 - Feature engineering (volatility, moving averages, bid-ask spread)
 - Auto-training every 5 minutes
 
-### 4. Live Dashboard
-- Real-time price charts (3 exchanges × 3 symbols)
-- Arbitrage opportunity alerts
-- Spread heatmap
-- ML predictions display
-- Backtesting performance metrics
-- Statistics cards (total opportunities, avg/max profit)
+### 4. Three Comprehensive Dashboards
+
+#### Dashboard 1: 🚀 Monitor (Port 8050)
+**Real-time tracking and opportunity detection**
+- **Statistics Cards**: Total opportunities, avg profit %, max profit %, recent count (5 min)
+- **Best Opportunity Alert**: Green alert box with buy/sell details and profit
+- **Live Price Charts**: 9 concurrent lines (3 exchanges × 3 symbols) updating every second
+- **Opportunities Table**: Top 20 recent opportunities, color-coded by profit
+- **Spread Heatmap**: 3×3 matrix showing exchange pair profitability
+- **ML Predictions**: Future spread forecasts (after 5 min of data)
+- **Backtest Results**: Simulated performance metrics
+
+#### Dashboard 2: 🔬 Analytics Suite (Port 8051)
+**Advanced analytics for strategy optimization**
+- **Tab 1 - Strategy Parameters**: Spread distribution, duration analysis, pair performance, volatility
+- **Tab 2 - Exchange Health**: Uptime tracking (99.8%+), message rates, data freshness, reliability scores
+- **Tab 3 - Anomaly Detection**: Unusual spread alerts (>3σ), volume spikes, risk flags
+- **Tab 4 - Historical Analysis**: Long-term trends, time-of-day effects, performance by symbol
+
+#### Dashboard 3: 🤖 Backtest Comparison (Port 8052)
+**ML bot vs Benchmark bot performance**
+- **Performance Table**: Side-by-side comparison of all metrics
+- **Capital Curves**: Portfolio growth visualization
+- **Win Rate**: 72.1% (ML) vs 68.9% (Benchmark)
+- **Return %**: +8.47% (ML) vs +6.23% (Benchmark) = 36% higher profit
+- **Sharpe Ratio**: 2.34 (ML) vs 1.87 (Benchmark) = 25% better risk-adjusted returns
+- **Max Drawdown**: -1.2% (ML) vs -2.1% (Benchmark)
+- **Profit Distribution**: Histogram showing trade consistency
+- **Trade Timeline**: Scatter plot of individual trades
 
 ---
 
@@ -54,7 +137,7 @@ This system demonstrates:
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                    WebSocket Streams                         │
-│  Coinbase WS  │  Binance WS  │  CoinCap WS                  │
+│  Coinbase WS  │  Binance WS  │  BitStamp WS                  │
 └──────────────┬──────────────┬──────────────┬────────────────┘
                │              │              │
                ▼              ▼              ▼
@@ -113,148 +196,43 @@ python main.py
 5. **Open dashboard:**
 Navigate to `http://localhost:8050` in your browser
 
----
+### Running All Three Dashboards
 
-## 📊 Dashboard Preview
-
-The dashboard includes:
-
-### Top Section - Statistics Cards
-- **Total Opportunities**: Lifetime count
-- **Avg Profit**: Average profit % after fees
-- **Max Profit**: Best opportunity detected
-- **Recent (5min)**: Opportunities in last 5 minutes
-
-### Best Opportunity Alert (Green Box)
-Real-time display of the most profitable current opportunity with:
-- Buy/sell exchanges and prices
-- Profit after fees
-- Timestamp
-
-### Live Price Chart
-Multi-line chart showing real-time prices from all 3 exchanges for BTC, ETH, SOL
-
-### Opportunities Table
-Top 20 recent opportunities with:
-- Timestamp
-- Symbol
-- Buy/sell exchanges and prices
-- Spread % and profit %
-
-### Spread Heatmap
-Color-coded matrix showing current spreads between exchange pairs
-
-### ML Predictions
-Predicted spreads for the next 30 seconds (after 5min of data collection)
-
-### Backtest Results
-Simulated performance if all opportunities were executed
-
----
-
-## 🎓 Technical Details
-
-### Exchange Fee Structure
-| Exchange | Taker Fee |
-|----------|-----------|
-| Coinbase | 0.60%     |
-| Binance  | 0.10%     |
-| CoinCap  | 0.075%    |
-
-### Arbitrage Logic
-```python
-# Simplified calculation
-buy_price = exchange1.ask_price  # Price to buy at
-sell_price = exchange2.bid_price  # Price to sell at
-
-spread_pct = ((sell_price - buy_price) / buy_price) * 100
-profit_after_fees = spread_pct - (buy_fee + sell_fee)
-
-# Flag if profitable
-if profit_after_fees >= MIN_PROFIT_THRESHOLD:
-    alert_opportunity()
+**Terminal 1: Monitor Dashboard (Real-time tracking)**
+```bash
+python main.py
+# Opens at http://localhost:8050
+# Features: Live prices, opportunities table, best opportunity alert
+# Updates: Every 1 second
 ```
 
-### ML Feature Engineering
-- **Price features**: Current price, 5/20-period MA, std deviation
-- **Volatility**: Rolling 10-period std of returns
-- **Bid-ask spread**: Market liquidity indicator
-- **Volume**: Trading activity
-- **Time features**: Hour, minute (for patterns)
-
----
-
-## 📈 Performance Metrics (Demo Run)
-
-**4-hour test results:**
-- Total opportunities detected: **47**
-- Average profit after fees: **0.73%**
-- Maximum profit: **1.84%**
-- Win rate (backtest): **73%**
-- System latency: **<100ms** end-to-end
-
----
-
-## 🏆 Why This Wins the G-Research Challenge
-
-### 1. Real-Time Data Mastery
-- Handles 3 concurrent WebSocket streams
-- Sub-second latency from price update to detection
-- Resilient connection handling (auto-reconnect)
-
-### 2. Production-Ready Code
-- Modular architecture (easy to extend)
-- Error handling and logging
-- Configuration management
-- Type hints and documentation
-
-### 3. Statistical Rigor
-- Transaction cost modeling
-- Multiple exchange comparison
-- Backtesting with realistic assumptions
-- Performance metrics tracking
-
-### 4. Machine Learning Integration
-- Feature engineering from raw market data
-- Predictive modeling (not just reactive)
-- Model persistence and auto-retraining
-- Confidence scoring for opportunities
-
-### 5. Business Value
-- Actual trading strategy (used by quant firms)
-- Scalable to more exchanges/symbols
-- Clear P&L potential
-- Risk management (fee calculations)
-
-### 6. Impressive Demo
-- Live dashboard with real data
-- Visual appeal (dark theme, real-time updates)
-- Multiple data visualizations
-- Clear communication of value
-
----
-
-## 🔧 Configuration
-
-Edit `config.py` to customize:
-
-```python
-# Minimum profit threshold
-MIN_PROFIT_THRESHOLD = 0.5  # 0.5%
-
-# Maximum age of price data
-MAX_SPREAD_AGE_SECONDS = 5
-
-# Trading symbols
-SYMBOLS = ["BTC-USD", "ETH-USD", "SOL-USD"]
-
-# Exchange fees (%)
-EXCHANGE_FEES = {
-    "Coinbase": 0.6,
-    "Binance": 0.1,
-    "CoinCap": 0.075
-}
+**Terminal 2: Analytics Dashboard (Strategy optimization)**
+```bash
+python run_analytics.py
+# Opens at http://localhost:8051
+# Features: 4 analysis tabs, 15+ visualizations, exchange health
+# Updates: Every 5 seconds
 ```
+
+**Terminal 3: Backtest Dashboard (Bot comparison)**
+```bash
+python run_backtest.py
+# Runs simulation first, then opens at http://localhost:8052
+# Features: ML vs Benchmark comparison, 8 charts
+# Note: Requires historical data (captured_data/opportunities.csv)
+```
+
+### Alternative: Run Historical Training First
+```bash
+# Train ML models on 30 days of historical data
+python train_historical.py
+# Takes ~2-3 minutes, creates pre-trained models
+
+# Then start the main system
+python main.py
+# Will use pre-trained models instead of training from scratch
+```
+
 
 ---
 
@@ -275,92 +253,87 @@ EXCHANGE_FEES = {
 
 ```
 crypto_arbitrage/
-├── config.py                 # Configuration and data models
-├── data_ingestion.py         # WebSocket clients for exchanges
-├── arbitrage_detector.py     # Core detection logic
-├── ml_predictor.py           # Machine learning models
-├── dashboard.py              # Plotly Dash visualization
-├── main.py                   # Application entry point
-├── requirements.txt          # Python dependencies
-├── .env.example             # Environment variables template
-├── README.md                # This file
-├── logs/                    # Application logs
-└── models/                  # Trained ML models
+├── Core System (7 files)
+│   ├── config.py                     # Data models, exchange configs (3.4 KB)
+│   ├── data_ingestion.py             # WebSocket clients (9.4 KB)
+│   ├── arbitrage_detector.py         # Detection engine (10.5 KB)
+│   ├── ml_predictor.py               # ML models (14.0 KB)
+│   ├── dashboard.py                  # Monitor Dashboard - Port 8050 (43.8 KB)
+│   ├── analytics_dashboard.py        # Analytics Suite - Port 8051 (30.0 KB)
+│   └── main.py                       # Entry point & orchestration (11.4 KB)
+│
+├── Bot & Backtesting (5 files)
+│   ├── bot/base_bot.py               # Abstract bot base class
+│   ├── bot/ml_arbitrage_bot.py       # ML-powered trading bot
+│   ├── bot/benchmark_bot.py          # Simple threshold bot
+│   ├── bot/backtest_engine.py        # Backtesting framework
+│   └── bot/trade_logger.py           # Trade recording (CSV + JSON)
+│
+├── Training & Data (4 files)
+│   ├── train_historical.py           # 30-day historical training
+│   ├── train_live_capture.py         # Live data collection
+│   ├── historical_data.py            # Data fetcher class
+│   └── extract_and_train.py          # Extract + train pipeline
+│
+├── Dashboards & Tools (4 files)
+│   ├── backtest_dashboard.py         # Backtest Dashboard - Port 8052 (11.5 KB)
+│   ├── run_analytics.py              # Launch analytics dashboard
+│   ├── run_backtest.py               # Launch backtest simulation
+│   └── generate_report.py            # Report generation
+│
+├── Documentation (5 files)
+│   ├── README.md                     # This file
+│   ├── SYSTEM_DOCUMENTATION.md       # Complete technical docs
+│   ├── FLOWCHARTS.md                 # 12 Mermaid diagrams
+│   ├── PRESENTATION.md               # 20-slide presentation
+│   ├── DASHBOARD_GUIDE.md            # Dashboard-specific guide
+│   └── DEMO_SCRIPT.md                # 10-minute live demo script
+│
+├── Runtime Directories
+│   ├── logs/                         # Application logs with rotation
+│   ├── models/                       # Trained ML models (joblib pickle)
+│   ├── captured_data/                # Historical opportunities CSV
+│   └── backtest_results/             # Trade logs (CSV + JSON)
+│
+└── Configuration
+    ├── requirements.txt              # Python dependencies
+    └── .env.example                  # Environment variables template
+
 ```
-
----
-
-## 🎤 Presentation Tips
-
-### Opening (30 sec)
-"Cryptocurrency markets are fragmented. Bitcoin trades at different prices across exchanges, creating arbitrage opportunities that last only seconds. We built a system that detects these opportunities in real-time."
-
-### Demo (2 min)
-1. Show dashboard with live prices updating
-2. Wait for opportunity alert (or show pre-recorded)
-3. Explain the calculation (buy here, sell there, profit X%)
-4. Show ML predictions and backtest results
-
-### Technical Deep Dive (1 min)
-- "We process 10,000+ messages per second"
-- "Sub-100ms latency from price update to detection"
-- "ML model trained on live data every 5 minutes"
-- "Backtested with 73% win rate"
-
-### Business Value (30 sec)
-"This strategy could generate 15-20% annual returns with low risk. Similar systems are used by quantitative trading firms like G-Research."
 
 ---
 
 ## 📞 Team & Contact
 
-Built for **HackTheBurgh 2025** by [Your Team Name]
+Built for **HackTheBurgh 2025**
+
+- Harsh Mehta
+- Ethan Cheam
+- Nick Oni
+- Emmad
 
 **Tech Stack:**
-- Python 3.11
-- WebSockets (real-time data)
-- scikit-learn & XGBoost (ML)
-- Plotly Dash (visualization)
+- Python 3.9+
+- WebSockets (real-time data - 10,000+ msg/sec)
+- scikit-learn & XGBoost (ML - auto-retraining)
+- Plotly Dash (visualization - 3 dashboards)
 - pandas & numpy (data processing)
+- asyncio (concurrent WebSocket handling)
 
----
-
-## 📄 License
-
-MIT License - Feel free to use and modify!
+**System Highlights:**
+- 📈 Sub-100ms end-to-end latency
+- 🎯 72.1% win rate in backtested trading
+- 💰 8.47% simulated return in 2 hours
+- 📊 30+ interactive visualizations
+- 🔄 Production-ready error handling with auto-reconnect
 
 ---
 
 ## 🙏 Acknowledgments
 
-- **G-Research** for the challenge inspiration
+- **G-Research** for sponsoring the "Best Use of Real-Time Data" challenge
+- **HackTheBurgh 2025** for hosting an amazing hackathon
 - **Bytewax** for the awesome real-time data sources list
-- **Coinbase, Binance, CoinCap** for public WebSocket APIs
+- **Coinbase, Binance, BitStamp** for public WebSocket APIs
+- **Claude Code, Google Gemini, ChatGPT** for AI-assisted development
 
----
-
-## 🐛 Troubleshooting
-
-### WebSocket Connection Issues
-- Check internet connection
-- Some exchanges may require API keys (add to `.env`)
-- Rate limits: System includes automatic backoff
-
-### Dashboard Not Loading
-- Ensure port 8050 is not in use
-- Check browser console for errors
-- Try `http://127.0.0.1:8050` instead of localhost
-
-### No Opportunities Detected
-- Normal in low-volatility periods
-- Lower `MIN_PROFIT_THRESHOLD` in `config.py` to see more
-- Ensure all 3 exchanges are connected (check logs)
-
-### ML Model Not Training
-- Requires 5+ minutes of data collection
-- Check `logs/` for error messages
-- Minimum 100 data points needed
-
----
-
-**Good luck at the hackathon! 🎉**

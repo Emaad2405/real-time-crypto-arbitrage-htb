@@ -1,0 +1,10 @@
+{
+  "spread_predictor": {
+    "trained": false,
+    "metrics": {}
+  },
+  "opportunity_scorer": {
+    "trained": true,
+    "metrics": {}
+  }
+}
